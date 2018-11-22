@@ -1,0 +1,11 @@
+{
+  "private": true,
+  "scripts": {
+    "install": "webdriver-manager update",
+    "test": "protractor conf.js"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "protractor": "^5.4.1"
+  }
+}
