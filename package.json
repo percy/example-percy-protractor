@@ -5,6 +5,7 @@
     "test": "protractor conf.js"
   },
   "devDependencies": {
+    "@percy/agent": "^0.1.3",
     "http-server": "^0.11.1",
     "protractor": "^5.4.1"
   }

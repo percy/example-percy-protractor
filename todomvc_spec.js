@@ -1,5 +1,13 @@
 const httpServer = require('http-server')
 
+
+const fs = require('fs')
+const agentJsFile = fs.readFileSync(require.resolve('@percy/agent/dist/public/percy-agent.js')).toString()
+const percySnapshot = function(name, options = {}) {
+  browser.executeScript(agentJsFile)
+  browser.executeScript('(new PercyAgent()).snapshot(\'protractor snapshot\')')
+}
+
 describe('TodoMVC', function() {
   const PORT = 8000
   const TEST_URL = `http://localhost:${PORT}`
@@ -24,6 +32,7 @@ describe('TodoMVC', function() {
   it('Loads the app', function() {
     browser.get(TEST_URL)
     expect(element(by.css('section.todoapp')).isPresent()).toBe(true)
+    percySnapshot("test snapshot from protractor")
   })
 
   it('Accepts a new todo', function() {
