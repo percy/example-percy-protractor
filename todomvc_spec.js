@@ -1,4 +1,5 @@
 const httpServer = require('http-server')
+const { percySnapshot } = require("@percy/protractor")
 
 describe('TodoMVC', function() {
   const PORT = 8000
@@ -24,6 +25,7 @@ describe('TodoMVC', function() {
   it('Loads the app', function() {
     browser.get(TEST_URL)
     expect(element(by.css('section.todoapp')).isPresent()).toBe(true)
+    percySnapshot("Home page")
   })
 
   it('Accepts a new todo', function() {
@@ -33,6 +35,8 @@ describe('TodoMVC', function() {
     element.all(by.css('.todo-list li')).then(function(todos) {
       expect(todos.length).toBe(1)
     })
+
+    percySnapshot("New todo", { widths: [768, 992, 1200] })
   })
 
   it('Lets you check off a a todo', function() {
@@ -46,5 +50,7 @@ describe('TodoMVC', function() {
 
     itemsLeftText = element(by.css('.todo-count')).getText()
     expect(itemsLeftText).toBe('0 items left')
+
+    percySnapshot("Checked-off todo", { widths: [300] })
   })
 })
