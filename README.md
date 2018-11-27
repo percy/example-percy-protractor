@@ -12,7 +12,7 @@ To install dependencies:
 $ npm install
 ```
 
-To run tests:
+To run tests with Percy snapshots:
 ```bash
 $ npm run test
 ```
