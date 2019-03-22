@@ -9,7 +9,9 @@ install:
   # Get the latest stable version of Node.js
   - ps: Install-Product node $env:nodejs_version
   # install modules
-  - npm install
+  # Sometimes the installation fails on CI because of network issues when running webdriver-manager
+  # This is a poor-engineer's retry.
+  - npm install || npm install
 
 # Post-install test scripts.
 test_script:
