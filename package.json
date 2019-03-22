@@ -1,8 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "install": "webdriver-manager update",
-    "test": "percy exec -- protractor conf.js"
+    "webdriver-update": "webdriver-manager update --gecko false --standalone false",
+    "install": "npm run webdriver-update || npm run webdriver-update",
+    "test": "percy exec -- protractor conf.js",
+    "test-win": "npm run pretest && percy exec -- protractor.cmd conf.js"
   },
   "devDependencies": {
     "@percy/agent": "^0.1.16",
