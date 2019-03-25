@@ -10,7 +10,7 @@
     "@percy/agent": "^0.1.16",
     "@percy/protractor": "^1.0.1",
     "http-server": "^0.11.1",
-    "protractor": "^5.4.2"
+    "protractor": "^6.0.0"
   },
   "dependencies": {}
 }
