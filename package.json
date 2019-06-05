@@ -3,11 +3,9 @@
   "scripts": {
     "webdriver-update": "webdriver-manager update --gecko false --standalone false",
     "install": "npm run webdriver-update || npm run webdriver-update",
-    "test": "percy exec -- protractor conf.js",
-    "test-win": "percy exec -- protractor.cmd conf.js"
+    "test": "percy exec -- protractor conf.js"
   },
   "devDependencies": {
-    "@percy/agent": "^0.5.2",
     "@percy/protractor": "^1.0.3",
     "http-server": "^0.11.1",
     "protractor": "^5.4.2"
