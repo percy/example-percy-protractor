@@ -8,7 +8,7 @@
   "devDependencies": {
     "@percy/protractor": "^1.0.4",
     "http-server": "^0.11.1",
-    "protractor": "^5.4.2"
+    "protractor": "^5.4.3"
   },
   "dependencies": {}
 }
