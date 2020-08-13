@@ -28,6 +28,24 @@ describe('TodoMVC', function() {
     await percySnapshot("Home page")
   })
 
+  it('Loads the app 2', async function() {
+    await browser.get(TEST_URL)
+    expect(await element(by.css('section.todoapp')).isPresent()).toBe(true)
+    await percySnapshot("Home page")
+  })
+
+  it('Loads the app 3', async function() {
+    await browser.get(TEST_URL)
+    expect(await element(by.css('section.todoapp')).isPresent()).toBe(true)
+    await percySnapshot("Home page")
+  })
+
+  it('Loads the app 4', async function() {
+    await browser.get(TEST_URL)
+    expect(await element(by.css('section.todoapp')).isPresent()).toBe(true)
+    await percySnapshot("Home page")
+  })
+
   it('Accepts a new todo', async function() {
     await browser.get(TEST_URL)
     await element(by.css('.new-todo')).sendKeys('New fancy todo', protractor.Key.ENTER)
