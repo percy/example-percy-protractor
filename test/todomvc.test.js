@@ -7,9 +7,9 @@ describe('TodoMVC', function () {
   let server;
 
   beforeAll(function () {
-    // Start a local server to serve our Angular Todo app.
     server = httpServer.createServer({ root: `${__dirname}/../` });
     server.listen(PORT);
+    browser.waitForAngularEnabled(false);
   });
 
   afterAll(function () {
