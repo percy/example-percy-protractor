@@ -1,14 +1,16 @@
 {
   "private": true,
   "scripts": {
-    "webdriver-update": "webdriver-manager update --gecko false --standalone false",
+    "webdriver-update": "webdriver-manager update --gecko true --chrome false --standalone false",
     "install": "npm run webdriver-update || npm run webdriver-update",
     "test": "percy exec -- protractor conf.js"
   },
   "devDependencies": {
-    "@percy/protractor": "^1.0.4",
+    "@percy/cli": "^1.0.0-beta.39",
+    "@percy/migrate": "^0.3.1",
+    "@percy/protractor": "^2.0.0-beta.3",
     "http-server": "^0.12.3",
-    "protractor": "^7.0.0"
-  },
-  "dependencies": {}
+    "protractor": "^7.0.0",
+    "todomvc-app-css": "^2.3.0"
+  }
 }
