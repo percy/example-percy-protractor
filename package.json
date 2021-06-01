@@ -10,6 +10,6 @@
     "@percy/protractor": "^2.0.0",
     "http-server": "^0.12.3",
     "protractor": "^7.0.0",
-    "todomvc-app-css": "^2.4.0"
+    "todomvc-app-css": "^2.4.1"
   }
 }
