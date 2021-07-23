@@ -10,7 +10,7 @@ app, forked at commit
 
 The tutorial assumes you're already familiar with JavaScript and
 [Protractor](https://www.protractortest.org) and focuses on using it with Percy. You'll still
-spend time introducing Protractor concepts.
+be able to follow along if you're not familiar with Protractor, but we won't spend time introducing Protractor concepts.
 
 The tutorial also assumes you have [Node 12+ with
 npm](https://nodejs.org/en/download/) and
