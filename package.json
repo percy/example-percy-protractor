@@ -6,7 +6,7 @@
     "test": "percy exec -- protractor conf.js"
   },
   "devDependencies": {
-    "@percy/cli": "^1.0.0-beta.67",
+    "@percy/cli": "^1.0.0-beta.68",
     "@percy/protractor": "^2.0.0",
     "http-server": "^13.0.1",
     "protractor": "^7.0.0",
