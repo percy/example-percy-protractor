@@ -20,6 +20,9 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Update WebDriver binaries (explicit; .npmrc ignore-scripts blocks the install hook)
+        run: npm run webdriver-update
+
       - name: Start Selenium Server
         run: npm run webdriver-start & sleep 15
 
