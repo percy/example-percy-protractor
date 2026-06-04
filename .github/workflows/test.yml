@@ -9,7 +9,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 20
 
       - name: Set up JDK 17
         uses: actions/setup-java@v3
@@ -19,6 +19,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+
+      - name: Update WebDriver binaries (explicit; .npmrc ignore-scripts blocks the install hook)
+        run: npm run webdriver-update
 
       - name: Start Selenium Server
         run: npm run webdriver-start & sleep 15
